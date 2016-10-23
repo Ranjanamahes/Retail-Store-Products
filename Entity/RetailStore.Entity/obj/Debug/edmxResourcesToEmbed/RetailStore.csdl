@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="RetailStore" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+  <EntityContainer Name="RetailStoreEntities" annotation:LazyLoadingEnabled="true">
+    <FunctionImport Name="RetailStore_spr_GetAllProducts" ReturnType="Collection(RetailStore.RetailStore_spr_GetAllProducts_Result)" />
+    <FunctionImport Name="RetailStore_spUpsert_Product" ReturnType="Collection(Int32)">
+      <Parameter Name="ProductId" Mode="In" Type="Int32" />
+      <Parameter Name="delete" Mode="In" Type="Boolean" />
+      <Parameter Name="SKU" Mode="In" Type="String" />
+      <Parameter Name="Name" Mode="In" Type="String" />
+      <Parameter Name="Category" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="RetailStore_spr_GetProductByID" ReturnType="Collection(RetailStore.RetailStore_spr_GetProductByID_Result)">
+      <Parameter Name="ProductId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="RetailStore_spr_GetProductByCategoryName" ReturnType="Collection(RetailStore.RetailStore_spr_GetProductByCategoryName_Result)">
+      <Parameter Name="CategoryName" Mode="In" Type="String" />
+    </FunctionImport>
+  </EntityContainer>
+  <ComplexType Name="RetailStore_spr_GetAllProducts_Result">
+    <Property Type="Int32" Name="ProductId" Nullable="false" />
+    <Property Type="String" Name="SKU" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="Category" Nullable="true" MaxLength="50" />
+    <Property Type="DateTime" Name="Last_Updated" Nullable="true" Precision="23" />
+    <Property Type="Decimal" Name="Price" Nullable="true" Precision="18" Scale="2" />
+  </ComplexType>
+  <ComplexType Name="RetailStore_spr_GetProductByID_Result">
+    <Property Type="Int32" Name="ProductId" Nullable="false" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="SKU" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="Category" Nullable="true" MaxLength="50" />
+    <Property Type="Decimal" Name="Price" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="DateTime" Name="Last_Updated" Nullable="true" Precision="23" />
+  </ComplexType>
+  <ComplexType Name="RetailStore_spr_GetProductByCategoryName_Result">
+    <Property Type="Int32" Name="ProductId" Nullable="false" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="SKU" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="Category" Nullable="true" MaxLength="50" />
+    <Property Type="Decimal" Name="Price" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="DateTime" Name="Last_Updated" Nullable="true" Precision="23" />
+  </ComplexType>
+</Schema>

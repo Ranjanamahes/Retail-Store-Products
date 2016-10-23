@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="RetailStore.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="RetailStoreStoreContainer" />
+        <Function Name="RetailStore_spr_GetAllProducts" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="RetailStore_spr_GetProductByCategoryName" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="CategoryName" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="RetailStore_spr_GetProductByID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ProductId" Type="int" Mode="In" />
+        </Function>
+        <Function Name="RetailStore_spUpsert_Product" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ProductId" Type="int" Mode="In" />
+          <Parameter Name="delete" Type="bit" Mode="In" />
+          <Parameter Name="SKU" Type="nvarchar" Mode="In" />
+          <Parameter Name="Name" Type="nvarchar" Mode="In" />
+          <Parameter Name="Category" Type="nvarchar" Mode="In" />
+        </Function>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="RetailStore" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+        <EntityContainer Name="RetailStoreEntities" annotation:LazyLoadingEnabled="true">
+          <FunctionImport Name="RetailStore_spr_GetAllProducts" ReturnType="Collection(RetailStore.RetailStore_spr_GetAllProducts_Result)" />
+          <FunctionImport Name="RetailStore_spUpsert_Product" ReturnType="Collection(Int32)">
+            <Parameter Name="ProductId" Mode="In" Type="Int32" />
+            <Parameter Name="delete" Mode="In" Type="Boolean" />
+            <Parameter Name="SKU" Mode="In" Type="String" />
+            <Parameter Name="Name" Mode="In" Type="String" />
+            <Parameter Name="Category" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="RetailStore_spr_GetProductByID" ReturnType="Collection(RetailStore.RetailStore_spr_GetProductByID_Result)">
+          <Parameter Name="ProductId" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="RetailStore_spr_GetProductByCategoryName" ReturnType="Collection(RetailStore.RetailStore_spr_GetProductByCategoryName_Result)">
+            <Parameter Name="CategoryName" Mode="In" Type="String" />
+          </FunctionImport>
+        </EntityContainer>
+        <ComplexType Name="RetailStore_spr_GetAllProducts_Result">
+          <Property Type="Int32" Name="ProductId" Nullable="false" />
+          <Property Type="String" Name="SKU" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="Category" Nullable="true" MaxLength="50" />
+          <Property Type="DateTime" Name="Last_Updated" Nullable="true" Precision="23" />
+          <Property Type="Decimal" Name="Price" Nullable="true" Precision="18" Scale="2" />
+        </ComplexType>
+        <ComplexType Name="RetailStore_spr_GetProductByID_Result">
+          <Property Type="Int32" Name="ProductId" Nullable="false" />
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="SKU" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="Category" Nullable="true" MaxLength="50" />
+          <Property Type="Decimal" Name="Price" Nullable="true" Precision="18" Scale="2" />
+          <Property Type="DateTime" Name="Last_Updated" Nullable="true" Precision="23" />
+        </ComplexType>
+        <ComplexType Name="RetailStore_spr_GetProductByCategoryName_Result">
+          <Property Type="Int32" Name="ProductId" Nullable="false" />
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="SKU" Nullable="false" MaxLength="100" />
+          <Property Type="String" Name="Category" Nullable="true" MaxLength="50" />
+          <Property Type="Decimal" Name="Price" Nullable="true" Precision="18" Scale="2" />
+          <Property Type="DateTime" Name="Last_Updated" Nullable="true" Precision="23" />
+        </ComplexType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs" Space="C-S">
+        <Alias Key="Model" Value="RetailStore" />
+        <Alias Key="Target" Value="RetailStore.Store" />
+        <EntityContainerMapping CdmEntityContainer="RetailStoreEntities" StorageEntityContainer="RetailStoreStoreContainer">
+          <FunctionImportMapping FunctionImportName="RetailStore_spr_GetAllProducts" FunctionName="RetailStore.Store.RetailStore_spr_GetAllProducts">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="RetailStore.RetailStore_spr_GetAllProducts_Result">
+                <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+                <ScalarProperty Name="SKU" ColumnName="SKU" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Category" ColumnName="Category" />
+                <ScalarProperty Name="Last_Updated" ColumnName="Last_Updated" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="RetailStore_spUpsert_Product" FunctionName="RetailStore.Store.RetailStore_spUpsert_Product" />
+          <FunctionImportMapping FunctionImportName="RetailStore_spr_GetProductByID" FunctionName="RetailStore.Store.RetailStore_spr_GetProductByID">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="RetailStore.RetailStore_spr_GetProductByID_Result">
+                <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="SKU" ColumnName="SKU" />
+                <ScalarProperty Name="Category" ColumnName="Category" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="Last_Updated" ColumnName="Last_Updated" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="RetailStore_spr_GetProductByCategoryName" FunctionName="RetailStore.Store.RetailStore_spr_GetProductByCategoryName">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="RetailStore.RetailStore_spr_GetProductByCategoryName_Result">
+                <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="SKU" ColumnName="SKU" />
+                <ScalarProperty Name="Category" ColumnName="Category" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="Last_Updated" ColumnName="Last_Updated" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <edmx:Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </edmx:Connection>
+    <edmx:Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </edmx:Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

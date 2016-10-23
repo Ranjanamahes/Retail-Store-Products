@@ -1,0 +1,8 @@
+C:\Projects\Product\Entity\RetailStore.Entity\bin\Debug\RetailStore.Entity.dll.config
+C:\Projects\Product\Entity\RetailStore.Entity\bin\Debug\RetailStore.Entity.dll
+C:\Projects\Product\Entity\RetailStore.Entity\bin\Debug\RetailStore.Entity.pdb
+C:\Projects\Product\Entity\RetailStore.Entity\bin\Debug\EntityFramework.dll
+C:\Projects\Product\Entity\RetailStore.Entity\bin\Debug\EntityFramework.xml
+C:\Projects\Product\Entity\RetailStore.Entity\obj\Debug\RetailStore.Entity.dll
+C:\Projects\Product\Entity\RetailStore.Entity\obj\Debug\RetailStore.Entity.pdb
+C:\Projects\Product\Entity\RetailStore.Entity\obj\Debug\RetailStore.Entity.csprojResolveAssemblyReference.cache

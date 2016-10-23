@@ -1,0 +1,8 @@
+C:\Projects\Product\Database\RetailStore.Database\bin\Debug\RetailStoreDB.mdf
+C:\Projects\Product\Database\RetailStore.Database\bin\Debug\RetailStoreDB_log.ldf
+C:\Projects\Product\Database\RetailStore.Database\bin\Debug\RetailStore.Database.dll.config
+C:\Projects\Product\Database\RetailStore.Database\bin\Debug\RetailStore.Database.dll
+C:\Projects\Product\Database\RetailStore.Database\bin\Debug\RetailStore.Database.pdb
+C:\Projects\Product\Database\RetailStore.Database\obj\Debug\RetailStore.Database.dll
+C:\Projects\Product\Database\RetailStore.Database\obj\Debug\RetailStore.Database.pdb
+C:\Projects\Product\Database\RetailStore.Database\obj\Debug\RetailStore.Database.csprojResolveAssemblyReference.cache

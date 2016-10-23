@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs" Space="C-S">
+  <Alias Key="Model" Value="RetailStore" />
+  <Alias Key="Target" Value="RetailStore.Store" />
+  <EntityContainerMapping CdmEntityContainer="RetailStoreEntities" StorageEntityContainer="RetailStoreStoreContainer">
+    <FunctionImportMapping FunctionImportName="RetailStore_spr_GetAllProducts" FunctionName="RetailStore.Store.RetailStore_spr_GetAllProducts">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RetailStore.RetailStore_spr_GetAllProducts_Result">
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+          <ScalarProperty Name="SKU" ColumnName="SKU" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Category" ColumnName="Category" />
+          <ScalarProperty Name="Last_Updated" ColumnName="Last_Updated" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="RetailStore_spUpsert_Product" FunctionName="RetailStore.Store.RetailStore_spUpsert_Product" />
+    <FunctionImportMapping FunctionImportName="RetailStore_spr_GetProductByID" FunctionName="RetailStore.Store.RetailStore_spr_GetProductByID">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RetailStore.RetailStore_spr_GetProductByID_Result">
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="SKU" ColumnName="SKU" />
+          <ScalarProperty Name="Category" ColumnName="Category" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Last_Updated" ColumnName="Last_Updated" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="RetailStore_spr_GetProductByCategoryName" FunctionName="RetailStore.Store.RetailStore_spr_GetProductByCategoryName">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RetailStore.RetailStore_spr_GetProductByCategoryName_Result">
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="SKU" ColumnName="SKU" />
+          <ScalarProperty Name="Category" ColumnName="Category" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Last_Updated" ColumnName="Last_Updated" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

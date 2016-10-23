@@ -1,0 +1,5 @@
+C:\Projects\Product\RetailStore.Model\RetailStore.Model\bin\Debug\RetailStore.Model.dll
+C:\Projects\Product\RetailStore.Model\RetailStore.Model\bin\Debug\RetailStore.Model.pdb
+C:\Projects\Product\RetailStore.Model\RetailStore.Model\obj\Debug\RetailStore.Model.dll
+C:\Projects\Product\RetailStore.Model\RetailStore.Model\obj\Debug\RetailStore.Model.pdb
+C:\Projects\Product\RetailStore.Model\RetailStore.Model\obj\Debug\RetailStore.Model.csprojResolveAssemblyReference.cache

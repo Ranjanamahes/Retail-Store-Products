@@ -1,0 +1,16 @@
+C:\Projects\Product\DataAccess\RetailStore.DataAccess\bin\Debug\RetailStore.DataAccess.dll.config
+C:\Projects\Product\DataAccess\RetailStore.DataAccess\bin\Debug\RetailStore.DataAccess.dll
+C:\Projects\Product\DataAccess\RetailStore.DataAccess\bin\Debug\RetailStore.DataAccess.pdb
+C:\Projects\Product\DataAccess\RetailStore.DataAccess\bin\Debug\AutoMapper.dll
+C:\Projects\Product\DataAccess\RetailStore.DataAccess\bin\Debug\EntityFramework.dll
+C:\Projects\Product\DataAccess\RetailStore.DataAccess\bin\Debug\RetailStore.CommonLibrary.dll
+C:\Projects\Product\DataAccess\RetailStore.DataAccess\bin\Debug\RetailStore.Entity.dll
+C:\Projects\Product\DataAccess\RetailStore.DataAccess\bin\Debug\RetailStore.CommonLibrary.pdb
+C:\Projects\Product\DataAccess\RetailStore.DataAccess\bin\Debug\RetailStore.Entity.pdb
+C:\Projects\Product\DataAccess\RetailStore.DataAccess\bin\Debug\AutoMapper.xml
+C:\Projects\Product\DataAccess\RetailStore.DataAccess\bin\Debug\EntityFramework.xml
+C:\Projects\Product\DataAccess\RetailStore.DataAccess\obj\Debug\RetailStore.DataAccess.csprojResolveAssemblyReference.cache
+C:\Projects\Product\DataAccess\RetailStore.DataAccess\obj\Debug\RetailStore.DataAccess.dll
+C:\Projects\Product\DataAccess\RetailStore.DataAccess\obj\Debug\RetailStore.DataAccess.pdb
+C:\Projects\Product\DataAccess\RetailStore.DataAccess\bin\Debug\RetailStore.Model.dll
+C:\Projects\Product\DataAccess\RetailStore.DataAccess\bin\Debug\RetailStore.Model.pdb

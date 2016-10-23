@@ -1,0 +1,6 @@
+C:\Projects\Product\CommonLibrary\RetailStore.CommonLibrary\bin\Debug\RetailStore.CommonLibrary.dll.config
+C:\Projects\Product\CommonLibrary\RetailStore.CommonLibrary\bin\Debug\RetailStore.CommonLibrary.dll
+C:\Projects\Product\CommonLibrary\RetailStore.CommonLibrary\bin\Debug\RetailStore.CommonLibrary.pdb
+C:\Projects\Product\CommonLibrary\RetailStore.CommonLibrary\obj\Debug\RetailStore.CommonLibrary.dll
+C:\Projects\Product\CommonLibrary\RetailStore.CommonLibrary\obj\Debug\RetailStore.CommonLibrary.pdb
+C:\Projects\Product\CommonLibrary\RetailStore.CommonLibrary\obj\Debug\RetailStore.CommonLibrary.csprojResolveAssemblyReference.cache
